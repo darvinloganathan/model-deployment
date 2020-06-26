@@ -5,7 +5,7 @@ app = Flask(__name__)
 model=pickle.load(open('log_model','rb'))
 @app.route('/')
 def hello_world():
-    return render_template("trail.html")
+    return render_template("index.html")
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     int_features=[float(x) for x in request.form.values()]
