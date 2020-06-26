@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>admission probability</title>
+</head>
+<body>
+ <div class="login">
+	<h1>prediction of admission in foreign university</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="cgpa" placeholder="Cgpa(out of 10)" required="required" />
+        <input type="text" name="tofl" placeholder="Tofl(out of 120" required="required" />
+	    <input type="text" name="university_rate" placeholder="out of 5" required="required" />
+	    <input type="text" name="GRE_Score" placeholder="GRE_Score(out of 340)" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   {{ pred }}
+     <br>
+ </div>
+</body>
+</html>
